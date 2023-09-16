@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoras de MRU y MRUV</title>
+</head>
+
+<link rel="stylesheet" href="./css/index.css">
+
+<body>
+    <header>
+        <h1>Movimiento Rectilinio Uniforme (MRU)</h1>
+        <p>El movimiento rectilíneo uniforme (MRU) es un movimiento que
+            se realiza sobre una línea recta, a velocidad constante
+            (con magnitud y dirección constantes).</p>
+        <p class="diferencia"><b>Diferencia entre un MRU y un MRUV</b></p>
+
+        <p>
+            La diferencia entre el mru y mruv es que en un mruv si existe una aceleración.
+            Al existir una aceleración entonces la velocidad no es absoluta en todo el
+            movimiento, por lo tanto siempre habrá una velocidad inicial y una velocidad
+            final. La aceleración es el cambio constante que la velocidad sufre en un cierto
+            periodo de tiempo. Los signos o la dirección que tenga tanto la aceleración como
+            la velocidad pueden dar una idea de cómo será un movimiento, donde si ambas
+            magnitudes tienen un mismo signo (por ende una misma dirección) entonces el objeto
+            en movimiento seguirá avanzando y acelerando en la misma dirección, pero si los
+            signos de la velocidad y de la aceleración son contrarios (Por ejemplo una
+            aceleración negativa y una velocidad positiva) entonces estas se irán cancelando
+            hasta hacer que el cuerpo en movimiento quede en estado de reposo.
+        </p>
+
+        <div>
+            <img src="/IMAGE/MRU1.jpg" alt="">
+            <img src="/IMAGE/MRU3.jpg" alt="">
+        </div>
+
+
+
+    </header>
+    <main>
+        <!-- Formulario para calcular la velocidad -->
+        <h2>Calcular Velocidad en MRU</h2>
+
+        <form class="Formulario">
+            <div>
+                <label for="distancia_velocidad">Distancia (metros):</label>
+                <input type="number" step="0.01" id="distancia_velocidad" name="distancia_velocidad" required><br><br>
+            </div>
+
+            <div>
+                <label for="tiempo_velocidad">Tiempo (segundos):</label>
+                <input type="number" step="0.01" id="tiempo_velocidad" name="tiempo_velocidad" required><br><br>
+            </div>
+
+            <button onclick="ResVelocidad()" type="button">Calcular Velocidad</button>
+
+
+            <p id="Respuesta">Respuesta:</p>
+            <p id="Respuesta1"></p>
+        </form>
+
+        <!-- Formulario para calcular el tiempo -->
+        <h2>Calcular Tiempo en MRU</h2>
+        <form class="Formulario">
+            <div>
+                <label for="distancia_tiempo">Distancia (metros):</label>
+                <input type="number" step="0.01" id="distancia_tiempo" name="distancia_tiempo" required><br><br>
+            </div>
+
+            <div>
+                <label for="velocidad_tiempo">Velocidad (m/s):</label>
+                <input type="number" step="0.01" id="velocidad_tiempo" name="velocidad_tiempo" required><br><br>
+            </div>
+
+            <button onclick="ResTiempo()" type="button">Calcular Tiempo</button>
+
+            <p id="Respuesta">Respuesta:</p>
+            <p id="Respuesta2"></p>
+        </form>
+
+        <!-- Formulario para calcular la distancia -->
+        <h2>Calcular Distancia en MRU</h2>
+        <form class="Formulario">
+            <div>
+                <label for="velocidad_distancia">Velocidad (m/s):</label>
+                <input type="number" step="0.01" id="velocidad_distancia" name="velocidad_distancia" required><br><br>
+            </div>
+
+            <div>
+                <label for="tiempo_distancia">Tiempo (segundos):</label>
+                <input type="number" step="0.01" id="tiempo_distancia" name="tiempo_distancia" required><br><br>
+            </div>
+
+
+            <button onclick="ResDistancia()" type="button">Calcular Distancia</button>
+
+
+            <p id="Respuesta">Respuesta:</p>
+            <p id="Respuesta3"></p>
+        </form>
+
+        <header>
+            <h1>Moviemiento Rectilinio Uniforme Variado (MRUV)</h1>
+            <p>El movimiento rectilíneo uniformemente variado (MRUV) o también llamado
+                movimiento rectilíneo uniforme acelerado (MRUA), es movimiento que se
+                caracteriza por tener una trayectoria en línea recta y una aceleración
+                constante y diferente a cero, por lo tanto la velocidad en este movimiento
+                cambia uniformemente dependiendo de la dirección de su aceleración.
+            </p>
+
+            <p class="diferencia"><strong>Características principales de un mruv:</strong></p>
+
+            <p>Para poder identificar cuando se trata
+                de un movimiento rectilíneo uniformemente variado es necesario saber que
+                parámetros tiene: Su trayectoria es en línea recta, lo que significa que es un
+                movimiento que se mueve en una dimensión. Su aceleración es diferente de cero,
+                esto es lo que diferencia un mru y un mruv, y es que la aceleración en un
+                movimiento rectilíneo uniformemente acelerado si es un valor a tener en cuenta.
+                Su velocidad varia constantemente, a efecto de la aceleración, la velocidad
+                aumenta o disminuye de forma permanente, por lo que en un ejercicio de
+                movimiento rectilíneo uniformemente variado siempre se va a trabajar con
+                una velocidad inicial y una velocidad final.
+            </p>
+
+            <div>
+                <img src="/IMAGE/mruv1.png" alt="">
+                <img src="/IMAGE/mruv2.png" alt="">
+            </div>
+
+        </header>
+        <!-- Formulario para calcular la velocidad inicial -->
+        <h2>Calcular Velocidad Inicial en MRUV</h2>
+        <form class="Formulario1">
+
+            <div>
+                <label for="velocidad_final_vi">Velocidad Final (m/s):</label>
+                <input type="number" step="0.01" id="velocidad_final_vi" name="velocidad_final_vi" required><br><br>
+            </div>
+
+            <div>
+                <label for="aceleracion_vi">Aceleración (m/s²):</label>
+                <input type="number" step="0.01" id="aceleracion_vi" name="aceleracion_vi" required><br><br>
+            </div>
+
+            <div>
+                <label for="tiempo_vi">Tiempo (segundos):</label>
+                <input type="number" step="0.01" id="tiempo_vi" name="tiempo_vi" required><br><br>
+            </div>
+
+            <button onclick="ResInicial()" type="button">Calcular Velocidad Inicial</button>
+
+
+            <p id="Respuesta">Respuesta:</p>
+            <p id="Respuesta4"></p>
+        </form>
+
+        <!-- Formulario para calcular la aceleración -->
+        <h2>Calcular Aceleración en MRUV</h2>
+        <form class="Formulario1">
+            <div>
+                <label for="velocidad_final_a">Velocidad Final (m/s):</label>
+                <input type="number" step="0.01" id="velocidad_final_a" name="velocidad_final_a" required><br><br>
+            </div>
+
+            <div>
+                <label for="velocidad_inicial_a">Velocidad Inicial (m/s):</label>
+                <input type="number" step="0.01" id="velocidad_inicial_a" name="velocidad_inicial_a" required><br><br>
+            </div>
+
+            <div>
+                <label for="tiempo_a">Tiempo (segundos):</label>
+                <input type="number" step="0.01" id="tiempo_a" name="tiempo_a" required><br><br>
+            </div>
+
+            <button onclick="ResAceleracion()" type="button">Calcular Aceleracion</button>
+
+            <p id="Respuesta">Respuesta:</p>
+            <p id="Respuesta5"></p>
+        </form>
+
+        <!-- Formulario para calcular la velocidad final -->
+        <h2>Calcular Velocidad Final en MRUV</h2>
+        <form class="Formulario1">
+            <div>
+                <label for="velocidad_inicial_vf">Velocidad Inicial (m/s):</label>
+                <input type="number" step="0.01" id="velocidad_inicial_vf" name="velocidad_inicial_vf" required><br><br>
+            </div>
+
+            <div>
+                <label for="aceleracion_vf">Aceleración (m/s²):</label>
+                <input type="number" step="0.01" id="aceleracion_vf" name="aceleracion_vf" required><br><br>
+            </div>
+
+            <div>
+                <label for="tiempo_vf">Tiempo (segundos):</label>
+                <input type="number" step="0.01" id="tiempo_vf" name="tiempo_vf" required><br><br>
+            </div>
+
+            <button onclick="ResFinal()" type="button">Calcular Velocidad Final</button>
+
+
+            <p id="Respuesta">Respuesta:</p>
+            <p id="Respuesta6"></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>Nombre:Abigail Aju Chiroy</p>
+        <p>Carne: 2290-20-20916</p>
+        <p>Correo: aajuc3@miumg.edu.gt</p>
+    </footer>
+
+    <script src="./JS/script.js"></script>
+
+</body>
+
+</html>
